@@ -1,4 +1,5 @@
 # calculate mean from a sample.
+
 from numpy.random import seed
 from numpy.random import randn
 from numpy import mean
