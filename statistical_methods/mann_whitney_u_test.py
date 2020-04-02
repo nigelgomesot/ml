@@ -20,12 +20,13 @@ if p > alpha:
 else:
 	print('Different distribution (Reject H0) | H1')
 
-data3 = shuffle(data1)
+data3 = data1
+shuffle(data3)
 
-# stat, p = mannwhitneyu(data1, data3)
-# print('Statistic:%.3f, p-value:%.3f' % (stat, p))
+stat, p = mannwhitneyu(data1, data3)
+print('Statistic:%.3f, p-value:%.3f' % (stat, p))
 
-# if p > alpha:
-# 	print('Same distribution (Fail to Reject H0) | H0')
-# else:
-# 	print('Different distribution (Reject H0) | H1')
+if p > alpha:
+	print('Same distribution (Fail to Reject H0) | H0')
+else:
+	print('Different distribution (Reject H0) | H1')
